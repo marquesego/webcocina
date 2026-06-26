@@ -7,13 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #e63946;
-            --bg-color: #f3f5f8;
+            --primary-color: #ff6b6b; /* Inspirado en el color de AMC Living */
+            --primary-hover: #ee5253;
+            --bg-color: #f4f6f9;
             --card-bg: #ffffff;
-            --text-main: #1a1a1a;
-            --text-muted: #4a5568;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
             --border-color: #e2e8f0;
-            --accent-bg: #f7fafc;
+            --accent-bg: #f8fafc;
+            --header-bg: #111111;
         }
 
         * {
@@ -30,40 +32,52 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* HEADER PREMIUM CON LOGOS */
         header {
-            background: var(--card-bg);
-            padding: 25px 40px;
-            border-bottom: 1px solid var(--border-color);
-            font-weight: 700;
-            font-size: 22px;
-            letter-spacing: -0.5px;
+            background: var(--header-bg);
+            padding: 15px 40px;
+            border-bottom: 3px solid var(--primary-color);
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
-        header span {
-            color: var(--primary-color);
+        .header-main-logo img {
+            height: 45px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .header-channels {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-channels img {
+            height: 35px;
+            display: block;
+            object-fit: contain;
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.4)),
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.6)),
                         url('images/1583113608-fondoliving.jpg');
             background-size: cover;
             background-position: center;
-            padding: 80px 40px;
+            padding: 90px 40px;
             color: white;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 38px;
+            font-size: 40px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             letter-spacing: -1px;
         }
 
@@ -73,41 +87,42 @@
             margin: 0 auto;
             opacity: 0.9;
             font-weight: 300;
+            color: #cbd5e1;
         }
 
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         .grid {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 45px;
         }
 
         .program {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(30, 41, 59, 0.04);
             border: 1px solid var(--border-color);
             display: grid;
             grid-template-columns: 38% 62%;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .program:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(30, 41, 59, 0.08);
         }
 
         .program-image {
             position: relative;
             background-size: cover;
             background-position: center;
-            min-height: 380px;
+            min-height: 400px;
             background-color: #edf2f7;
         }
 
@@ -117,11 +132,12 @@
             left: 20px;
             background: #10b981;
             color: white;
-            padding: 5px 10px;
-            border-radius: 6px;
+            padding: 6px 12px;
+            border-radius: 8px;
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
         }
 
         .program-info {
@@ -132,15 +148,15 @@
         }
 
         .title {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
             margin-bottom: 15px;
             letter-spacing: -0.5px;
-            color: #000;
+            color: #0f172a;
         }
 
         .desc {
-            font-size: 14.5px;
+            font-size: 15px;
             color: var(--text-muted);
             margin-bottom: 25px;
             text-align: justify;
@@ -149,43 +165,46 @@
         .meta {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 12px;
             margin-bottom: 25px;
         }
 
         .meta div {
             background: var(--accent-bg);
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 13px;
-            border: 1px solid #edf2f7;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 13.5px;
+            border: 1px solid var(--border-color);
+            color: #334155;
         }
 
         .meta b {
-            color: #2d3748;
+            color: #0f172a;
         }
 
         .video-box {
             margin-top: auto;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
             border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
 
         .video-box iframe {
             width: 100%;
-            height: 240px;
+            height: 250px;
             display: block;
             border: none;
         }
 
         footer {
-            background: #1a202c;
-            color: #a0aec0;
+            background: #0f172a;
+            color: #94a3b8;
             text-align: center;
             padding: 40px 20px;
             font-size: 14px;
-            margin-top: 60px;
+            margin-top: 80px;
+            border-top: 4px solid var(--primary-color);
         }
 
         @media (max-width: 992px) {
@@ -193,18 +212,30 @@
                 grid-template-columns: 1fr;
             }
             .program-image {
-                min-height: 260px;
+                min-height: 280px;
             }
             .meta {
                 grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER CON ASIGNACIÓN DE LOGOS -->
     <header>
-        <div>LIFESTYLE <span>AMC NETWORKS</span></div>
+        <div class="header-main-logo">
+            <img src="images/34952.png" alt="AMC Global Media">
+        </div>
+        <div class="header-channels">
+            <img src="images/63171-Canal_Cocina.svg" alt="Canal Cocina">
+            <img src="images/1218823505-amcliving_1776407795715.jpg" alt="AMC Living">
+        </div>
     </header>
 
     <div class="hero">
@@ -215,6 +246,7 @@
     <div class="container">
         <div class="grid">
 
+            <!-- ME VOY A COMER EL MUNDO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/412906883-veronica.png');">
                     <span class="badge">HD / 4K</span>
@@ -238,6 +270,7 @@
                 </div>
             </div>
 
+            <!-- EL CAMINO DE SANTIAGO BY JULIUS -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/3462639019-julius.png');">
                     <span class="badge">HD / 4K</span>
@@ -261,6 +294,7 @@
                 </div>
             </div>
 
+            <!-- SPANISH CHIRINGUITO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/946961421-spanishchiringuito.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -284,6 +318,7 @@
                 </div>
             </div>
 
+            <!-- PASIÓN POR EL MARISCO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/4238451146-pasionporelmarisco.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -307,6 +342,7 @@
                 </div>
             </div>
 
+            <!-- LOS MEJORES POSTRES DEL MUNDO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/3047756253-losmejorespostres.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -330,6 +366,7 @@
                 </div>
             </div>
 
+            <!-- JULIUS INVITA EN 22 MINUTOS -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/654677966-juliusinvita.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -353,6 +390,7 @@
                 </div>
             </div>
 
+            <!-- REFORMA INTEGRAL -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/REFORMA INTEGRAL.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -361,7 +399,7 @@
                     <div>
                         <div class="title">REFORMA INTEGRAL</div>
                         <div class="desc">
-                            Seguimos el paso a paso de una reforma de un piso en su totalidad. Desde el planteamiento del proyecto, los planos de la reforma, la demolición de los tabiques y su posterior construcción según el diseño del arquitecto, pasando por la elección de los materiales y resto de elementos decorativos.
+                            Seguimos el paso a paso de una reforma de un piso en su totalidad. Desde el planteamiento del proyecto, los planos de la reforma, la demolición de los tabiques and su posterior construcción según el diseño del arquitecto, pasando por la elección de los materiales y resto de elementos decorativos.
                         </div>
                         <div class="meta">
                             <div><b>Canal de Emisión:</b> Decasa</div>
@@ -376,6 +414,7 @@
                 </div>
             </div>
 
+            <!-- MINIPISOS ASOMBROSOS -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/MINIPISOS ASOMBROSOS.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -389,7 +428,7 @@
                         <div class="meta">
                             <div><b>Año de prod.:</b> 2021-2024</div>
                             <div><b>Cap. / Duración:</b> 39 x 25’</div>
-                            --calidad-video: HD / 4K;
+                            <div><b>Calidad de vídeo:</b> HD / 4K</div>
                             <div><b>Temporadas:</b> T1 (8 Ep) • T2 (22 Ep) • T3 (9 Ep)</div>
                         </div>
                     </div>
@@ -399,6 +438,7 @@
                 </div>
             </div>
 
+            <!-- REFORMA SIN OBRA -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/REFORMA_SIN_OBRA_10.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -422,6 +462,7 @@
                 </div>
             </div>
 
+            <!-- MI CASA CÁMPER -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/micasacamper.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -430,7 +471,7 @@
                     <div>
                         <div class="title">MI CASA CÁMPER</div>
                         <div class="desc">
-                            AMC Living te invita a conocer el fascinante mundo de la camperización de furgonetas, vehículos convertidos en pequeñas casas con todo tipo de lujos, como baños futuristas, cocinas completamente equipadas, salón con proyector y pantalla de cine, o un rincón con chimenea. La creatividad no tiene límites en estos espacios donde algunos de sus propietarios no solo viajan y experimentan todo tipo de aventuras, sino que también viven de forma permanente. Además, de la mano de talleres especializados descubrirás las últimas novedades en cuanto a materiales, distribution del vehículo y equipamiento.
+                            AMC Living te invita a conocer el fascinante mundo de la camperización de furgonetas, vehículos convertidos en pequeñas casas con todo tipo de lujos, como baños futuristas, cocinas completamente equipadas, salón con proyector y pantalla de cine, o un rincón con chimenea. La creatividad no tiene límites en estos espacios donde algunos de sus propietarios no solo viajan y experimentan todo tipo de aventuras, sino que también viven de forma permanente. Además, de la mano de talleres especializados descubrirás las últimas novedades en cuanto a materiales, distribución del vehículo y equipamiento.
                         </div>
                         <div class="meta">
                             <div><b>Año de prod.:</b> 2025</div>
@@ -445,6 +486,7 @@
                 </div>
             </div>
 
+            <!-- LA COCINA DE TUS SUEÑOS -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/lacocinadetussuenos.jpg');">
                     <span class="badge">HD / 4K</span>
