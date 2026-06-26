@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle AMC Networks - Catálogo Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --bg-color: #f3f5f8;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #4a5568;
+            --border-color: #e2e8f0;
+            --accent-bg: #f7fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 25px 40px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        header span {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.4)),
+                        url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 40px;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .program {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 38% 62%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .program:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        .program-image {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            min-height: 380px;
+            background-color: #edf2f7;
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #10b981;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .program-info {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            color: #000;
+        }
+
+        .desc {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .meta div {
+            background: var(--accent-bg);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            border: 1px solid #edf2f7;
+        }
+
+        .meta b {
+            color: #2d3748;
+        }
+
+        .video-box {
+            margin-top: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .video-box iframe {
+            width: 100%;
+            height: 240px;
+            display: block;
+            border: none;
+        }
+
+        footer {
+            background: #1a202c;
+            color: #a0aec0;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 992px) {
+            .program {
+                grid-template-columns: 1fr;
+            }
+            .program-image {
+                min-height: 260px;
+            }
+            .meta {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>LIFESTYLE <span>AMC NETWORKS</span></div>
+    </header>
+
+    <div class="hero">
+        <h1>Catálogo de Contenidos Estilo de Vida</h1>
+        <p>Explora nuestras producciones exclusivas y formatos de éxito internacional dedicados a la gastronomía y la transformación del hogar.</p>
+    </div>
+
+    <div class="container">
+        <div class="grid">
+
+            <!-- ME VOY A COMER EL MUNDO -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">ME VOY A COMER EL MUNDO</div>
+                        <div class="desc">
+                            Programa de viajes gastronómicos donde conoceremos a fondo la cocina de ciudades de todo el mundo. Además de visitar sus mercados y restaurantes, la periodista Verónica Zumalacárregui da un paso más en su afán por investigar las costumbres de cada destino, contactando con protagonistas locales que hablan español y que harán de cicerones de excepción. Sin duda, la mejor manera de conocer de primera mano qué se cuece en torno a la mesa en cada rincón del mundo y la llave maestra para colarse en las casas de estos “guías”, curiosear sus neveras y despensas, cocinar and compartir mesa en familia.
+                        </div>
+                        <div class="meta">
+                            <div><b>Presentadora:</b> Verónica Zumalacárregui</div>
+                            <div><b>Año de prod.:</b> 2016-2026</div>
+                            <div><b>Cap. / Duración:</b> 67 x 60’</div>
+                            <div><b>Temporadas:</b> T1 (Ep. 1-22 HD) • T2 (Ep. 23-32 4K) • T3 (Ep. 33-44 4K) • T4 (Ep. 1-23 4K)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://youtu.be/2XIkVa2AdVw" title="Me voy a comer el mundo"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EL CAMINO DE SANTIAGO BY JULIUS -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">EL CAMINO DE SANTIAGO BY JULIUS</div>
+                        <div class="desc">
+                            Julius Bienert recorre el Camino de Santiago en busca de los sabores tradicionales más sorprendentes de esta ruta milenaria. Pueblo a pueblo, irá descubriendo recetas cocinadas a fuego lento, platos únicos en el mundo y postres tan desconocidos como sabrosos. El famoso chef recorrerá 800 kilómetros a pie con un objetivo: alcanzar el cielo a través de los sabores.
+                        </div>
+                        <div class="meta">
+                            <div><b>Presentador:</b> Julius Bienert</div>
+                            <div><b>Año de prod.:</b> 2022-2024</div>
+                            <div><b>Cap. / Duración:</b> 132 x 25’</div>
+                            <div><b>Temporadas:</b> T1 a T6 (22 Ep. por temporada)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAMINO" title="El Camino de Santiago by Julius"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPANISH CHIRINGUITO -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">SPANISH CHIRINGUITO</div>
+                        <div class="desc">
+                            Canal Cocina recorre la costa española en busca de los platos más sabrosos de nuestros chiringuitos de playa. A lo largo de 22 episodios, descubriremos los tesoros gastronómicos que esconden algunos de estos establecimientos tan arraigados en nuestra forma de entender y disfrutar la comida en verano.
+                        </div>
+                        <div class="meta">
+                            <div><b>Año de prod.:</b> 2018</div>
+                            <div><b>Cap. / Duración:</b> 22 x 25’</div>
+                            <div><b>Calidad de vídeo:</b> HD / 4K</div>
+                            <div><b>ID Referencia:</b> 0000729491Achiringuito</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_CHIRINGUITO" title="Spanish Chiringuito"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASIÓN POR EL MARISCO -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">PASIÓN POR EL MARISCO</div>
+                        <div class="desc">
+                            Si te gusta disfrutar del marisco en Navidad pero te da un poco de miedo no saber darle el punto en casa, estos dos programas especiales con el cocinero Manuel Costiña van a resolver todas tus dudas. De la mano de este chef gallego, reconocido con una estrella Michelin, aprenderás todos los secretos sobre los mariscos más habituales en nuestras mesas durante las fiestas: tiempos de cocción, manipulación adecuada, recetas, trucos...
+                        </div>
+                        <div class="meta">
+                            <div><b>Presentador:</b> Manuel Costiña</div>
+                            <div><b>Año de prod.:</b> 2023-2024</div>
+                            <div><b>Cap. / Duración:</b> 5 x 25’</div>
+                            <div><b>Calidad de vídeo:</b> HD / 4K</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_MARISCO" title="Pasión por el marisco"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOS MEJORES POSTRES DEL MUNDO -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">LOS MEJORES POSTRES DEL MUNDO</div>
+                        <div class="desc">
+                            Una serie de Canal Cocina en la que de la mano de la joven pastelera Andrea Dopico aprenderemos a elaborar recetas míticas, históricas y fundamentales de la repostería mundial. Desde unas sencillas cookies de chocolate hasta postres más elaborados como la famosa tarta Saint Honoré o la Linzer torte, la tarta más antigua del mundo de la que se conserva receta.
+                        </div>
+                        <div class="meta">
+                            <div><b>Presentadora:</b> Andrea Dopico</div>
+                            <div><b>Año de prod.:</b> 2019</div>
+                            <div><b>Cap. / Duración:</b> 22 x 25’</div>
+                            <div><b>Calidad de vídeo:</b> HD / 4K</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_POSTRES" title="Los mejores postres del mundo"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JULIUS INVITA EN 22 MINUTOS -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">JULIUS INVITA EN 22 MINUTOS</div>
+                        <div class="desc">
+                            Nuestro cocinero más rápido vuelve con nuevos programas especiales para celebrar todo tipo de fiestas y comidas en casa y lo hará, como siempre, en tan solo 22 minutos. Julius exprime al máximo el poco tiempo que tenemos para cocinar y nos ofrece un recetario para invitar y triunfar, que promete solucionar todos nuestros compromisos a contrarreloj.
+                        </div>
+                        <div class="meta">
+                            <div><b>Presentador:</b> Julius Bienert</div>
+                            <div><b>Año de prod.:</b> 2022-2024</div>
+                            <div><b>Cap. / Duración:</b> 132 x 25’</div>
+                            <div><b>Temporadas:</b> T1 a T6 (22 Ep. por temporada)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_JULIUS_INVITA" title="Julius invita en 22 minutos"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REFORMA INTEGRAL -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">REFORMA INTEGRAL</div>
+                        <div class="desc">
+                            Seguimos el paso a paso de una reforma de un piso en su totalidad. Desde el planteamiento del proyecto, los planos de la reforma, la demolición de los tabiques y su posterior construcción según el diseño del arquitecto, pasando por la elección de los materiales y resto de elementos decorativos.
+                        </div>
+                        <div class="meta">
+                            <div><b>Canal de Emisión:</b> Decasa</div>
+                            <div><b>Año de prod.:</b> 2020-2026</div>
+                            <div><b>Cap. / Duración:</b> 54 x 50’</div>
+                            <div><b>Temporadas:</b> T1 (22 Ep) • T2 (22 Ep) • T3 (10 Ep)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_REFORMA" title="Reforma Integral"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MINIPISOS ASOMBROSOS -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">MINIPISOS ASOMBROSOS</div>
+                        <div class="desc">
+                            Vamos a conocer los minipisos más sorprendentes de España, de la mano de sus propietarios o los arquitectos que los han transformado en hogares funcionales y acogedores. Descubriremos todos los secretos para aprovechar bien el espacio y sacar el máximo partido a cada rincón. Y aprenderemos asombrosos trucos de interiorismo y decoración para espacios pequeños.
+                        </div>
+                        <div class="meta">
+                            <div><b>Año de prod.:</b> 2021-2024</div>
+                            <div><b>Cap. / Duración:</b> 39 x 25’</div>
+                            <div><b>Calidad de vídeo:</b> HD / 4K</div>
+                            <div><b>Temporadas:</b> T1 (8 Ep) • T2 (22 Ep) • T3 (9 Ep)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_MINIPISOS" title="Minipisos Asombrosos"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REFORMA SIN OBRA -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">REFORMA SIN OBRA</div>
+                        <div class="desc">
+                            Renovaciones asombrosas que demuestran que no hace falta derribar muros para cambiar radicalmente el aspecto de un hogar. A través de soluciones creativas de decoración, el uso estratégico del color, textiles avanzados y cambios en el mobiliario, los presentadores transforman estancias anticuadas en espacios modernos y sumamente llenos de estilo en tiempo récord.
+                        </div>
+                        <div class="meta">
+                            <div><b>Presentadores:</b> C. Botín, P. Herrero y S. de Kort</div>
+                            <div><b>Año de prod.:</b> 2023-2025</div>
+                            <div><b>Cap. / Duración:</b> 22 x 25’</div>
+                            <div><b>Temporadas:</b> T1 (7 Ep) • T2 (8 Ep) • T3 (7 Ep)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_SIN_OBRA" title="Reforma sin Obra"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MI CASA CÁMPER -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">MI CASA CÁMPER</div>
+                        <div class="desc">
+                            AMC Living te invita a conocer el fascinante mundo de la camperización de furgonetas, vehículos convertidos en pequeñas casas con todo tipo de lujos, como baños futuristas, cocinas completamente equipadas, salón con proyector y pantalla de cine, o un rincón con chimenea. La creatividad no tiene límites en estos espacios donde algunos de sus propietarios no solo viajan y experimentan todo tipo de aventuras, sino que también viven de forma permanente. Además, de la mano de talleres especializados descubrirás las últimas novedades en cuanto a materiales, distribución del vehículo y equipamiento.
+                        </div>
+                        <div class="meta">
+                            <div><b>Año de prod.:</b> 2025</div>
+                            <div><b>Cap. / Duración:</b> 5 x 25’</div>
+                            <div><b>Calidad de vídeo:</b> HD / 4K</div>
+                            <div><b>Temporadas:</b> T1 (Ep. 1-5)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_CAMPER" title="Mi Casa Cámper"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LA COCINA DE TUS SUEÑOS -->
+            <div class="program">
+                <div class="program-image" style="background-image:url('https://images.unsplash.com/photo-1556909212-d5b604d7c99d?auto=format&fit=crop&w=600&q=80');">
+                    <span class="badge">HD / 4K</span>
+                </div>
+                <div class="program-info">
+                    <div>
+                        <div class="title">LA COCINA DE TUS SUEÑOS</div>
+                        <div class="desc">
+                            Sin duda, una de las estancias con más protagonismo dentro de una casa es la cocina. Punto de reunión alrededor de la comida, las cocinas necesitan ser acogedoras y funcionales. Y en este programa te enseñamos las últimas tendencias, ideas y transformaciones, para que encuentres la inspiración que te permita crear la cocina de tus sueños, sea cual sea tu presupuesto.
+                        </div>
+                        <div class="meta">
+                            <div><b>Presentador:</b> Alejandro Gimeno</div>
+                            <div><b>Año de prod.:</b> 2000-2025</div>
+                            <div><b>Cap. / Duración:</b> 59 x 25’</div>
+                            <div><b>Temporadas:</b> T1 (22 Ep) • T2 (32 Ep) • T3 (5 Ep)</div>
+                        </div>
+                    </div>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_SUEÑOS" title="La Cocina de tus Sueños"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 AMC Networks International Southern Europe. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
