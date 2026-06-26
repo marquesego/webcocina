@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifestyle AMC Networks - Catálogo Oficial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #ff6b6b; /* Inspirado en el color de AMC Living */
-            --primary-hover: #ee5253;
+            --primary-color: #ff6b6b; /* Rosa Coral AMC Living */
             --bg-color: #f4f6f9;
             --card-bg: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
             --border-color: #e2e8f0;
             --accent-bg: #f8fafc;
-            --header-bg: #111111;
+            --header-blue: #007a99; /* Azul Corporativo AMC */
         }
 
         * {
@@ -32,62 +31,53 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER PREMIUM CON LOGOS */
+        /* HEADER EXCLUSIVO AMC AZUL */
         header {
-            background: var(--header-bg);
-            padding: 15px 40px;
-            border-bottom: 3px solid var(--primary-color);
+            background: var(--header-blue);
+            padding: 20px 40px;
+            border-bottom: 4px solid #005c73;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .header-main-logo img {
-            height: 45px;
+            height: 65px; /* Logo de AMC más grande */
             display: block;
             object-fit: contain;
         }
 
-        .header-channels {
+        /* GRANDES BLOQUES DE SECCIÓN DE MARCA */
+        .brand-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+        }
+
+        .brand-block {
             display: flex;
             align-items: center;
-            gap: 20px;
+            justify-content: center;
+            padding: 60px 40px;
+            transition: opacity 0.2s ease;
         }
 
-        .header-channels img {
-            height: 35px;
-            display: block;
+        .brand-block img {
+            height: 80px; /* Logos grandes */
+            max-width: 90%;
             object-fit: contain;
         }
 
-        .hero {
-            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.6)),
-                        url('images/1583113608-fondoliving.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 90px 40px;
-            color: white;
-            text-align: center;
+        .brand-cocina {
+            background: #111111;
         }
 
-        .hero h1 {
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 16px;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
-            font-weight: 300;
-            color: #cbd5e1;
+        .brand-living {
+            background: var(--primary-color);
         }
 
         .container {
@@ -182,17 +172,20 @@
             color: #0f172a;
         }
 
+        /* REPRODUCTORES AJUSTADOS A PROPORCIÓN MÁS GRANDE 16:9 */
         .video-box {
             margin-top: auto;
             border-radius: 14px;
             overflow: hidden;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Forzado de proporción nativa de emisión */
         }
 
         .video-box iframe {
             width: 100%;
-            height: 250px;
+            height: 100%;
             display: block;
             border: none;
         }
@@ -217,36 +210,38 @@
             .meta {
                 grid-template-columns: 1fr;
             }
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px;
+            .brand-showcase {
+                grid-template-columns: 1fr;
+            }
+            .brand-block {
+                padding: 40px 20px;
+            }
+            .brand-block img {
+                height: 60px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER CON ASIGNACIÓN DE LOGOS -->
     <header>
         <div class="header-main-logo">
             <img src="images/34952.png" alt="AMC Global Media">
         </div>
-        <div class="header-channels">
-            <img src="images/canalcocina.png" alt="Canal Cocina">
-            <img src="images/1218823505-amcliving_1776407795715.jpg" alt="AMC Living">
-        </div>
     </header>
 
-    <div class="hero">
-        <h1>Catálogo de Contenidos Estilo de Vida</h1>
-        <p>Explora nuestras producciones exclusivas y formatos de éxito internacional dedicados a la gastronomía y la transformación del hogar.</p>
+    <div class="brand-showcase">
+        <div class="brand-block brand-cocina">
+            <img src="images/canalcocina.png" alt="Canal Cocina">
+        </div>
+        <div class="brand-block brand-living">
+            <img src="images/1218823505-amcliving_1776407795715.jpg" alt="AMC Living">
+        </div>
     </div>
 
     <div class="container">
         <div class="grid">
 
-            <!-- ME VOY A COMER EL MUNDO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/412906883-veronica.png');">
                     <span class="badge">HD / 4K</span>
@@ -270,7 +265,6 @@
                 </div>
             </div>
 
-            <!-- EL CAMINO DE SANTIAGO BY JULIUS -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/3462639019-julius.png');">
                     <span class="badge">HD / 4K</span>
@@ -294,7 +288,6 @@
                 </div>
             </div>
 
-            <!-- SPANISH CHIRINGUITO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/946961421-spanishchiringuito.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -318,7 +311,6 @@
                 </div>
             </div>
 
-            <!-- PASIÓN POR EL MARISCO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/4238451146-pasionporelmarisco.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -342,7 +334,6 @@
                 </div>
             </div>
 
-            <!-- LOS MEJORES POSTRES DEL MUNDO -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/3047756253-losmejorespostres.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -366,7 +357,6 @@
                 </div>
             </div>
 
-            <!-- JULIUS INVITA EN 22 MINUTOS -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/654677966-juliusinvita.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -390,7 +380,6 @@
                 </div>
             </div>
 
-            <!-- REFORMA INTEGRAL -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/REFORMA INTEGRAL.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -399,7 +388,7 @@
                     <div>
                         <div class="title">REFORMA INTEGRAL</div>
                         <div class="desc">
-                            Seguimos el paso a paso de una reforma de un piso en su totalidad. Desde el planteamiento del proyecto, los planos de la reforma, la demolición de los tabiques and su posterior construcción según el diseño del arquitecto, pasando por la elección de los materiales y resto de elementos decorativos.
+                            Seguimos el paso a paso de una reforma de un piso en su totalidad. Desde el planteamiento del proyecto, los planos de la reforma, la demolición de los tabiques y su posterior construcción según el diseño del arquitecto, pasando por la elección de los materiales y resto de elementos decorativos.
                         </div>
                         <div class="meta">
                             <div><b>Canal de Emisión:</b> Decasa</div>
@@ -414,7 +403,6 @@
                 </div>
             </div>
 
-            <!-- MINIPISOS ASOMBROSOS -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/MINIPISOS ASOMBROSOS.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -438,7 +426,6 @@
                 </div>
             </div>
 
-            <!-- REFORMA SIN OBRA -->
             <div class="program">
                 <div class="program-image" style="background-image:url('images/REFORMA_SIN_OBRA_10.jpg');">
                     <span class="badge">HD / 4K</span>
@@ -462,9 +449,8 @@
                 </div>
             </div>
 
-            <!-- MI CASA CÁMPER -->
             <div class="program">
-                <div class="program-image" style="background-image:url('images/micasacamper.JPEG');">
+                <div class="program-image" style="background-image:url('images/micasacamper.jpg');">
                     <span class="badge">HD / 4K</span>
                 </div>
                 <div class="program-info">
@@ -486,9 +472,8 @@
                 </div>
             </div>
 
-            <!-- LA COCINA DE TUS SUEÑOS -->
             <div class="program">
-                <div class="program-image" style="background-image:url('images/lacocinadetussuenos.JPG');">
+                <div class="program-image" style="background-image:url('images/lacocinadetussuenos.jpg');">
                     <span class="badge">HD / 4K</span>
                 </div>
                 <div class="program-info">
